@@ -1,33 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Lingu Keyboard Bar</title>
     <style>
-        body, html { 
-            margin: 0; padding: 0; 
-            overflow: hidden; 
-            background: linear-gradient(to right, #1b3d2f, #0a1f16); /* Matching your keyboard green */
-            color: white; 
-            font-family: sans-serif; 
+        /* This ensures the bar is clean and matches your keyboard theme */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 50px; /* Exact height for the 320x50 ad */
+            overflow: hidden; /* Removes all scrollbars */
+            background-color: #002200; /* Dark green to match your Lingu theme */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .container { 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            height: 100vh; 
-            text-align: center;
+
+        #ad-slot {
+            width: 320px;
+            height: 50px;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
     <div id="ad-slot">
-        <span>AADS Ad Loading...</span>
-    </div>
-
-    </div>
+        <div id="frame" style="width: 320px; margin: auto; z-index: 99998; height: auto;">
+            <iframe data-aa='2434688' src='https://ad.a-ads.com/2434688/?size=320x50'
+                    style='border:0; padding:0; width:320px; height:50px; overflow:hidden; display: block; margin: auto;'>
+            </iframe>
+        </div>
+        </div>
 
 </body>
 </html>
-
