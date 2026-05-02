@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+html, body {
+  margin:0;
+  padding:0;
+  height:300px;
+  background:#000;
+  overflow:hidden;
+}
+
+#ad-container{
+  height:300px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+}
+
+iframe{
+  border:none;
+  width:320px;
+  display:block;
+}
+
+.top{ height:150px; }
+.bottom{ height:150px; }
+</style>
+</head>
+
+<body>
+
+<div id="ad-container">
+
+  <!-- 🔹 Adsterra -->
+  <iframe class="top"
+    src="YOUR_ADSTERRA_LINK">
+  </iframe>
+
+  <!-- 🔹 A-Ads -->
+  <iframe class="bottom"
+    src="https://ad.a-ads.com/2434688/?size=320x50">
+  </iframe>
+
+</div>
+
+<script>
+setInterval(function(){
+
+  // refresh Adsterra
+  document.querySelector(".top").src =
+    "YOUR_ADSTERRA_LINK?" + Date.now();
+
+  // refresh A-Ads
+  document.querySelector(".bottom").src =
+    "https://ad.a-ads.com/2434688/?size=320x50&" + Date.now();
+
+},30000); // 30 sec
+
+</script>
+
+</body>
+</html>
